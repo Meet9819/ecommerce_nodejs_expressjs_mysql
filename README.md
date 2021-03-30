@@ -12,6 +12,7 @@
 
 
 - Open Command Prompt
+- npm install
 - node -v [Check the node version you have]
 - node index.js
 - localhost:7000
