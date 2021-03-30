@@ -1,6 +1,6 @@
 # eCommerce site using Node Express js & Mysql (SQL file included)
 This is a basic eCommrece website.
-<!--
+
 1. Bootstrap 4 design - Done
 2. Product listing - Done
 3. Add to cart - Done
@@ -11,9 +11,9 @@ This is a basic eCommrece website.
 8. Checkout page - Working...
 
 # Screenshots
-<!--
+
 Products list page
-![alt ProductsPage](https://sendmail2krrish.github.io/eCommerce-site-using-Node-Express-js/Screenshots/pic1.png)
+![alt ProductsPage](https://github.com/Meet9819/ecommerce_nodejs_expressjs_mysql/blob/master/screenshort/1.png)
 <!--
 Product details page
 ![alt ProductDetails](https://sendmail2krrish.github.io/eCommerce-site-using-Node-Express-js/Screenshots/pic2.png)
