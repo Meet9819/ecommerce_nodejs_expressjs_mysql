@@ -1,0 +1,65 @@
+<% include include/allcss.ejs %>
+<% include include/allscript.ejs %>
+<title><%= siteTitle+' | '+title %></title>
+<% include include/header.ejs %>
+
+<div class="breadcrumb-container">
+  <div class="container">
+      <div class="breadcrumb">
+          <div class="title-page">
+            <h3>Cart</h3>
+          </div>
+          <a class="home" href="index.php" title="Return to Home">Home</a>
+          <span class="navigation-pipe"></span>
+          <span class="navigation_page">Shop</span>
+      </div>
+  </div>
+</div>
+    
+
+<div class="columns-container">
+  <div id="columns" class="container">
+
+  <div class="container">
+    <form method="POST" action="/update-cart">
+    <% if(products.length > 0) { %>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% products.forEach(function(product, index) { %>
+            <tr>
+              <td><a class="text-body" href="/product/<%= product.pid %>"><img style="max-width: 100px; max-height: 50px;" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/<%= product.picture %>" /></a></td>
+              <td><a class="text-body" href="/product/<%= product.pid %>"><%= product.title %></a><br><span class="badge badge-warning"><%= product.name %></span></td>
+              <td>₹<%= product.price %></td>
+              <td><input type="number" style="width: 70px;" min="1" name="qnt[]" value="<%= product.qnt %>"/></td>
+              <td><a href="/remove-from-cart/pid-<%= index %>">Delete</a></td>
+            </tr>
+          <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <div class="clearfix"></div>
+      <a href="/empty-cart" class="btn btn-danger float-left">Clear cart</a>
+      <a href="/checkout" class="btn btn-primary float-right">Checkout</a>
+      <button class="btn btn-success float-right" style="margin-right: 10px;">Update</button>
+      <div class="clearfix"></div>
+    <% } else { %>
+      <p>Your cart is empty. <a href="/shop">Continue shopping</a> </p>
+    <% } %>
+    </form>
+  </div>
+  </div>
+  </div>
+  
+
+
+<% include include/footer.ejs %>

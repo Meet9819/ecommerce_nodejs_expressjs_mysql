@@ -1,0 +1,79 @@
+<% include ../include/adminallcss.ejs %>
+<title>Admin Panel | Meet Shah</title>
+  
+            <% include ../include/adminheader.ejs %>      
+            
+          
+          
+
+
+
+
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">View Products</li>
+                </ul>   
+                
+                
+
+              
+                           
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">View Category</h3>
+                            </div>
+                            <div class="panel-body">
+
+              
+                    <% if (blogsresult.length > 0) {%>
+                        <table class="table datatable">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">Position</th>
+                                    <th scope="col">Number</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% blogsresult.forEach((blog, index) => { %>
+                                    <tr>
+                                        <th scope="row"><%= blog.id %></th>
+                                        <td><img width="50px" src="/assets/img/<%= blog.image %>" class="rounded-circle player-img" alt=""></td>
+                                        <td><%= blog.first_name %></td>
+                                        <td><%= blog.last_name %></td>
+                                        <td><%= blog.position %></td>
+                                        <td><%= blog.number %></td>
+                                        <td>@<%= blog.user_name %></td>
+                                        <td>
+                                            <a href="/admin/blogsedit/<%= blog.id %>"  rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                                            <a href="/admin/blogsdelete/<%= blog.id %>" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    <% } else { %>
+                        <p class="text-center">No Blogs found. Go <a href="/admin/blogsadd" >here</a> To Add Blogs.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+      
+        <% include ../include/adminallscript.ejs %>  
+   

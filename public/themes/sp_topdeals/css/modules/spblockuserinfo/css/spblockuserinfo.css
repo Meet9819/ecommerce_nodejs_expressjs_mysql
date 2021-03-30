@@ -1,0 +1,219 @@
+#user_infoblock-top {
+  float: right;
+  display: inline-block;
+  position: relative;
+  height: 38px;
+  padding: 0 15px; }
+  #user_infoblock-top:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    height: 10px;
+    width: 1px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    background: #ebebeb; }
+  #user_infoblock-top div.login-2 {
+    display: inline-block;
+    font-size: 12px;
+    height: 38px;
+    line-height: 37px;
+    text-transform: capitalize;
+    padding: 0 15px;
+    margin: 0 15px;
+    position: relative; }
+    #user_infoblock-top div.login-2 a {
+      color: #555; }
+    #user_infoblock-top div.login-2 .fa {
+      margin-right: 10px;
+      color: #555; }
+    #user_infoblock-top div.login-2:before, #user_infoblock-top div.login-2:after {
+      content: "";
+      position: absolute;
+      top: 13px;
+      height: 10px;
+      width: 1px;
+      bottom: auto;
+      background: #ebebeb; }
+    #user_infoblock-top div.login-2:before {
+      left: 0;
+      right: auto; }
+    #user_infoblock-top div.login-2:after {
+      left: auto;
+      right: 0; }
+  #user_infoblock-top div.current {
+    cursor: pointer;
+    margin: 0;
+    padding: 0 20px 0 0;
+    line-height: 37px;
+    display: inline-block;
+    position: relative; }
+    #user_infoblock-top div.current:before {
+      content: "\f107";
+      font-family: FontAwesome;
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      color: #999; }
+    #user_infoblock-top div.current span {
+      padding: 0;
+      color: #555;
+      font-size: 12px; }
+      #user_infoblock-top div.current span .fa {
+        margin-right: 8px; }
+  #user_infoblock-top ul {
+    display: none;
+    position: absolute;
+    width: 140px;
+    padding: 5px 20px;
+    background: #fff;
+    right: 0;
+    top: 100%;
+    text-align: justify;
+    z-index: 11;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.15);
+    -ms-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.15); }
+    #user_infoblock-top ul li {
+      margin-bottom: 3px; }
+      #user_infoblock-top ul li a {
+        padding: 0;
+        display: block;
+        line-height: 35px;
+        font-size: 12px;
+        color: #555; }
+      #user_infoblock-top ul li .fa {
+        width: 25px; }
+
+.header_v2 #user_infoblock-top {
+  position: fixed;
+  top: 220px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  width: 40px;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 3px 0 0 3px;
+  float: none; }
+  .header_v2 #user_infoblock-top:before {
+    display: none; }
+  .header_v2 #user_infoblock-top div.current {
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    display: block;
+    position: relative;
+    background-image: url(../../../../img/icon/icon-user.png);
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .header_v2 #user_infoblock-top div.current:before {
+      position: absolute;
+      border-width: 9px;
+      border-style: solid;
+      border-color: transparent transparent transparent #fff;
+      top: 10px;
+      content: "";
+      display: block;
+      left: auto;
+      opacity: 0;
+      position: absolute;
+      right: 42px;
+      transition: all 0.3s ease-in 0s;
+      z-index: 12; }
+    .header_v2 #user_infoblock-top div.current.active:before {
+      opacity: 1; }
+    .header_v2 #user_infoblock-top div.current span {
+      font-size: 0; }
+  .header_v2 #user_infoblock-top ul {
+    position: absolute;
+    z-index: 3;
+    right: 60px;
+    left: auto;
+    background: #fff;
+    top: 0px;
+    display: none;
+    width: 200px;
+    padding: 15px 20px 12px;
+    -moz-box-shadow: 0 1px 4px 0 #c1c1c1;
+    -webkit-box-shadow: 0 1px 4px 0 #c1c1c1;
+    box-shadow: 0 1px 4px 0 #c1c1c1;
+    border-radius: 3px; }
+    .header_v2 #user_infoblock-top ul li h4 {
+      margin: 0 0 8px;
+      padding: 0 0 8px;
+      border-bottom: 1px solid #ebebeb; }
+    .header_v2 #user_infoblock-top ul li a {
+      line-height: 22px;
+      font-size: 13px;
+      color: #666; }
+    .header_v2 #user_infoblock-top ul li:last-child h4 {
+      margin: 0;
+      padding: 0;
+      border: none; }
+
+.header_v3 #user_infoblock-top {
+  float: none;
+  padding: 0; }
+  .header_v3 #user_infoblock-top:before {
+    display: none; }
+.header_v3 .user-info {
+  margin: 0;
+  padding: 0 0 0 50px;
+  line-height: 40px;
+  background: transparent url(../../../../img/icon/icon-user-info.png) no-repeat left center; }
+  .header_v3 .user-info a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold; }
+
+@media (max-width: 1199px) {
+  .header_v3 .user-info a span.text-2 {
+    display: none; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .header_v1 #user_infoblock-top div.current {
+    display: none; }
+  .header_v1 #user_infoblock-top div.login-2 {
+    margin: 0; }
+    .header_v1 #user_infoblock-top div.login-2:before, .header_v1 #user_infoblock-top div.login-2:after {
+      display: none; } }
+@media (max-width: 767px) {
+  div div#user_infoblock-top {
+    float: none;
+    padding: 0 20px 0 0; }
+    div div#user_infoblock-top div.login-2 {
+      margin: 0 15px 0 0; }
+
+  .header_v2 div#user_infoblock-top {
+    padding: 0 3px 3px 0; }
+
+  .header_v3 .user-info {
+    padding: 0;
+    background: transparent; }
+
+  .rtl div#user_infoblock-top {
+    padding: 0 0 0 20px; }
+    .rtl div#user_infoblock-top div.login-2 {
+      margin: 0 0 0 15px; }
+  .rtl .header_v2 div#user_infoblock-top {
+    padding: 0 3px 3px 0; } }
+@media (max-width: 479px) {
+  div div#user_infoblock-top {
+    padding: 0; }
+    div div#user_infoblock-top:before {
+      display: none; }
+    div div#user_infoblock-top div.current {
+      display: none; }
+    div div#user_infoblock-top div.login-2 {
+      margin: 0; }
+
+  .rtl div#user_infoblock-top div.login-2 {
+    margin: 0; } }
+
+/*# sourceMappingURL=spblockuserinfo.css.map */

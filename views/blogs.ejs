@@ -1,0 +1,136 @@
+<% include include/allcss.ejs %>
+<% include include/allscript.ejs %>
+<title><%= siteTitle+' | '+title %></title>
+
+  <% include include/header.ejs %>
+  <!-- Columns -->
+  <div class="columns-container">
+    <div id="columns" class="container">
+       <div class="row">
+          <!-- Sidebar -->
+          <div id="sidebar" class="column  col-lg-3 col-md-3 col-sm-4 sidebar-left">
+             <div id="category_blog_block_left"  class="block blogModule boxPlain">
+                <h3 class='block-title'>Categories</h3>
+                <div class="block_content list-block">
+                   <ul class="list-link">
+                    
+                    <li>
+                       <a href="shop.php?q='.$row['id'].'">Fruits</a>
+                    </li>  
+                    <li>
+                        <a href="shop.php?q='.$row['id'].'">Vegetables</a>
+                     </li>  
+                     <li>
+                        <a href="shop.php?q='.$row['id'].'">Mobiles</a>
+                     </li>
+
+
+                   </ul>
+                </div>
+             </div>
+             <div id="recent_article_smart_blog_block_left"  class="block blogModule boxPlain">
+                <h3 class='block-title'>Recent posts</h3>
+                <div class="block_content">
+                   <ul class="recentArticles">
+                      
+                     <li>
+                         <a class="image" title="Atback Minim Tempor" >
+                         <img width="50px"  src="/img/blogs/b1.jpg">
+                         </a>
+                         <a class="title"  title="Atback Minim Tempor" >Atback Minim Tempor</a>
+                         <span class="info"><i class="fa fa-calendar" aria-hidden="true"></i>Meet Shah</span>
+                      </li>
+                      <li>
+                        <a class="image" title="Atback Minim Tempor" >
+                        <img width="50px"  src="/img/blogs/b1.jpg">
+                        </a>
+                        <a class="title"  title="Atback Minim Tempor" >Atback Minim Tempor</a>
+                        <span class="info"><i class="fa fa-calendar" aria-hidden="true"></i>Meet Shah</span>
+                     </li>
+                    
+                   </ul>
+                </div>
+             </div>
+             <div class="sp_banner_1_1496489133870433331
+                banner-left effect-1  spbanner">
+                <a href="#" title="Banner Left Column">			
+                <img class="img-responsive" src="img/advertise/banner-left.jpg" alt="Banner Left Column" title="Banner Left Column"/>
+                </a> 
+             </div>
+          </div>
+          <!-- End of Sidebar -->
+          <!-- Center Column -->
+          <div id="center_column" class="column col-sm-8 col-md-9 col-lg-9">
+             <div id="smartblogcat">
+                <div class="smartblogcat-wrap">
+                   <div class="smartblogcat-inner grid row">
+                     
+
+
+
+                     <% bl.forEach(function(bl){ %>
+                    <div itemtype="#" itemscope="" class="sdsarticleCat col-sm-6 col-xs-12">
+                         <div id="smartblogpost-12" class="smartblogpost">
+                            <div class="articleContent">
+                              
+                               <img itemprop="image" alt="'.$row['title'].'" src="/assets/img/<%= bl.image %>" class="imageFeatured">
+                              
+                               <div class="sdsarticle-text">
+                                  <div class="info-info">
+                                     <div class="date_added">
+                                        <span class="d" itemprop="dateCreated">13 </span>
+                                        <span>/</span>
+                                        <span class="m" itemprop="dateCreated"> December </span>
+                                        <span class="y" itemprop="dateCreated">2017</span>
+                                     </div>
+                                     <div class="sdsarticleHeader">
+                                        <h3 class="sdstitle_block title"><a >Pork turducken capicola est short loin, laboris shank proident andouille drumstick shoulder nulla....</a></h3>
+                                     </div>
+                                   
+                                     <div class="sdsarticle-des">
+                                        <div class="clearfix">
+                                            Pork turducken capicola est short loin, laboris shank proident andouillePork turducken capicola est short loin, laboris shank proident andouillePork turducken capicola est short loin, laboris shank proident andouille
+                                        </div>
+                                     </div>
+                                     <div class="sdsarticle-info">
+                                        <span>Post by</span>
+                                        <span itemprop="author" class="author">Meet Shah</span>    
+                                     </div>
+                                     <%= bl.first_name %>     
+                                     <%= bl.price %>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div> 
+                      <% }); %>
+
+
+
+
+
+
+
+                               
+
+
+
+
+
+
+
+                    
+                   </div>
+                </div>
+             </div>
+           
+          </div>
+          <!-- #center_column -->
+       </div>
+       <!-- .row -->
+    </div>
+    <!-- #columns -->
+ </div>
+ <!-- .columns-container -->
+
+  <% include include/footer.ejs %>

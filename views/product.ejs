@@ -1,0 +1,56 @@
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://via.placeholder.com/16/007bff/007bff" type="image/x-icon">
+</head>
+<body> 
+<!--
+
+  <% include include/headerold.ejs %>
+
+  <div class="jumbotron text-center">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p> 
+  </div>
+    -->
+  <div class="container">
+    <div class="row">
+    <% products.forEach(function(product){ %>
+      <div class="col-md-12 text-center">
+        
+        
+
+
+
+        <% if(title === 'Shop'){ %>
+          <a class="text-body" href="/product/<%= product.pid %>">
+            <img class="img-fluid" src="/img/product/<%= product.picture %>" />
+            <h4 class="card-title"><%= product.title %></h4>
+          </a>
+        <% } else {%>
+          <img class="img-fluid" src="/img/product/<%= product.picture %>" />
+          <h4 class="card-title"><%= product.title %></h4>
+        <% } %>
+        <span class="badge badge-warning"><%= product.name %></span>
+        <p class="card-text">Price: ₹<%= product.price %></p>
+        <% if(title === 'Shop'){ %>
+          <p class="card-text"><%= product.details.substring(0, 100)+' ...' %></p>
+        <% } else {%>
+          <p class="card-text"><%= product.details %></p>
+        <% } %>
+        <a href="/add-to-cart/pid-<%= product.pid %>" class="card-link"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</a>
+
+        
+
+
+        
+      </div>
+    <% }); %>
+    </div>
+  </div>
+
+  

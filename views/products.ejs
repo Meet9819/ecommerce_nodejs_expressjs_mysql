@@ -1,0 +1,78 @@
+<% include include/allcss.ejs %>
+<% include include/allscript.ejs %>
+<title><%= siteTitle+' | '+title %></title>
+
+
+  <% include include/header.ejs %>
+
+    <div class="breadcrumb-container">
+      <div class="container">
+          <div class="breadcrumb">
+              <div class="title-page">
+                <h3>All Products</h3>
+              </div>
+              <a class="home" href="index.php" title="Return to Home">Home</a>
+              <span class="navigation-pipe"></span>
+              <span class="navigation_page">Shop</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="columns-container">
+    <div id="columns" class="container">
+
+    <div class="row">
+      
+    <ul class="product_list grid row">
+    <% products.forEach(function(product){ %>
+      
+      <li class="ajax_block_product  col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+        <div class="product-container" itemscope itemtype="#">
+          <div class="left-block">
+              <div class="product-image-container"> 
+                  <a class="product-image"  href="/product/<%= product.pid %>">
+                    <img class="img-fluid" src="/img/product/<%= product.picture %>" />
+                  </a>
+              </div>
+          </div>
+          <div class="product-info right-block">                   
+              <h5 itemprop="name" class="product-name">
+              <a  href=""itemprop="url" > <%= product.title %> [  <%= product.name %> ]</a></h5>            
+              <div class="color-list-container"></div>
+              <div class="price-off clearfix">
+                  <div class="price-left">                         
+                      <div itemprop="offers" itemscope itemtype="#" class="price-box">
+                          <meta itemprop="priceCurrency" content="USD" />
+                          <span itemprop="price" class="price product-price"> ₹<%= product.price %></span>
+                          <span class="old-price product-price">100.00</span>
+                          <div class="price-right price-right-2">                                    
+                            <span class="price-percent-reduction">-10% <strong>OFF</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="price-right">
+                      <span class="price-percent-reduction">-10% <strong>OFF</strong></span>
+                  </div>
+                  <br>
+                <!--  <p class="card-text"><%= product.details.substring(0, 100)+' ...' %></p>
+                  <a href="/add-to-cart/pid-<%= product.pid %>" class="card-link"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</a>
+                -->
+              </div>                   
+          </div>
+      </div>
+      </li>
+    <% }); %>
+  </ul>
+
+    </div>
+  </div> 
+  </div>
+
+
+
+ <% include include/footer.ejs %>
+
+
+  
+
+

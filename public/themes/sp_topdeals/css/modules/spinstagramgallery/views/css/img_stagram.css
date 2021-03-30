@@ -1,0 +1,189 @@
+div.instargram {
+  margin: 0 0 5px; }
+  div.instargram h3.block-title {
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    padding: 10px 0 18px;
+    position: relative; }
+    div.instargram h3.block-title:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 40px;
+      left: 0;
+      right: auto;
+      top: auto;
+      bottom: -1px; }
+  div.instargram .item a {
+    margin-bottom: 8px;
+    display: inline-block; }
+  div.instargram .spinstagramgallery-carousel .owl-stage-outer {
+    direction: ltr; }
+  div.instargram .spinstagramgallery-carousel .spinstagramgallery-item img {
+    padding: 0; }
+  div.instargram .spinstagramgallery-carousel .spinstagramgallery-item:hover img {
+    opacity: 0.8; }
+
+.sp-instagram-gallery {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-top: 5px; }
+
+.sp-instagram-gallery .ig-wrap {
+  width: 100%;
+  display: block;
+  overflow: hidden; }
+
+.sp-instagram-gallery .ig-wrap .ig-items {
+  width: 100%;
+  display: block;
+  overflow: hidden; }
+
+.sp-instagram-gallery .ig-wrap .ig-items ul {
+  width: 100%;
+  display: block;
+  overflow: hidden; }
+
+.sp-instagram-gallery .ig-wrap .ig-items ul li {
+  float: left;
+  overflow: hidden;
+  padding: 5px;
+  list-style-type: none; }
+
+.sp-instagram-gallery .ig-wrap .ig-items ul li img {
+  width: 100%; }
+
+.sp-instagram-gallery .ig-wrap .ig-items ul li img:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70); }
+
+.lang_ar .sp-instagram-gallery .ig-wrap .ig-items ul li {
+  float: right; }
+
+.sp-instagram-gallery.msie .ig-title-module {
+  color: red; }
+
+/*############################################### css for botton #################################################*/
+.sp-instagram-gallery .owl-controls .owl-nav div {
+  position: absolute;
+  z-index: 999;
+  background: #ffffff;
+  color: #666666;
+  display: block;
+  font-size: 30px;
+  height: 40px;
+  left: 0;
+  line-height: 34px;
+  overflow: hidden;
+  text-align: center;
+  top: 50%;
+  text-transform: translateY(-50%);
+  width: 40px;
+  direction: ltr; }
+
+.sp-instagram-gallery .owl-controls .owl-nav div:hover {
+  background: #666666;
+  color: #ffffff;
+  cursor: pointer; }
+
+.sp-instagram-gallery .owl-controls .owl-nav div.owl-prev {
+  left: 10px; }
+
+.sp-instagram-gallery .owl-controls .owl-nav div.owl-next {
+  right: 10px;
+  left: auto; }
+
+#left_column .sp-instagram-gallery .owl-controls .owl-nav div, #right_column .sp-instagram-gallery .owl-controls .owl-nav div {
+  width: 30px;
+  height: 30px;
+  bottom: 25%;
+  border: none; }
+
+#left_column .sp-instagram-gallery .owl-controls .owl-nav div:before, #right_column .sp-instagram-gallery .owl-controls .owl-nav div:before {
+  height: 28px;
+  width: 28px; }
+
+#left_column .sp-instagram-gallery .owl-controls .owl-nav div:after, #right_column .sp-instagram-gallery .owl-controls .owl-nav div:after {
+  height: 28px;
+  width: 28px;
+  padding: 5px 0 0 0; }
+
+/*-----------------------------Css for Responsive ----------------------*/
+@media all and (max-width: 479px) {
+  .sp-instagram-gallery .ig-wrap .ig04-6 ul li {
+    width: 16.64%; }
+
+  .sp-instagram-gallery .ig-wrap .ig04-5 ul li {
+    width: 19.958%; }
+
+  .sp-instagram-gallery .ig-wrap .ig04-4 ul li {
+    width: 24.995%; }
+
+  .sp-instagram-gallery .ig-wrap .ig04-3 ul li {
+    width: 33.315%; }
+
+  .sp-instagram-gallery .ig-wrap .ig04-2 ul li {
+    width: 49.985%; }
+
+  .sp-instagram-gallery .ig-wrap .ig04-1 ul li {
+    width: 100%; } }
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .sp-instagram-gallery .ig-wrap .ig03-6 ul li {
+    width: 16.64%; }
+
+  .sp-instagram-gallery .ig-wrap .ig03-5 ul li {
+    width: 19.958%; }
+
+  .sp-instagram-gallery .ig-wrap .ig03-4 ul li {
+    width: 24.995%; }
+
+  .sp-instagram-gallery .ig-wrap .ig03-3 ul li {
+    width: 33.295%; }
+
+  .sp-instagram-gallery .ig-wrap .ig03-2 ul li {
+    width: 49.999%; }
+
+  .sp-instagram-gallery .ig-wrap .ig03-1 ul li {
+    width: 100%; } }
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .sp-instagram-gallery .ig-wrap .ig02-6 ul li {
+    width: 16.64%; }
+
+  .sp-instagram-gallery .ig-wrap .ig02-5 ul li {
+    width: 19.958%; }
+
+  .sp-instagram-gallery .ig-wrap .ig02-4 ul li {
+    width: 24.995%; }
+
+  .sp-instagram-gallery .ig-wrap .ig02-3 ul li {
+    width: 33.315%; }
+
+  .sp-instagram-gallery .ig-wrap .ig02-2 ul li {
+    width: 49.999%; }
+
+  .sp-instagram-gallery .ig-wrap .ig02-1 ul li {
+    width: 100%; } }
+@media all and (min-width: 1200px) {
+  .sp-instagram-gallery .ig-wrap .ig01-6 ul li {
+    width: 16.64%; }
+
+  .sp-instagram-gallery .ig-wrap .ig01-5 ul li {
+    width: 20%; }
+
+  .sp-instagram-gallery .ig-wrap .ig01-4 ul li {
+    width: 25%; }
+
+  .sp-instagram-gallery .ig-wrap .ig01-3 ul li {
+    width: 33.315%; }
+
+  .sp-instagram-gallery .ig-wrap .ig01-2 ul li {
+    width: 49.999%; }
+
+  .sp-instagram-gallery .ig-wrap .ig01-1 ul li {
+    width: 100%; } }
+
+/*# sourceMappingURL=img_stagram.css.map */

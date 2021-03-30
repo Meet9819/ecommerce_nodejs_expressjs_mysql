@@ -1,0 +1,150 @@
+<% include include/allcss.ejs %>
+<% include include/allscript.ejs %>
+<title><%= siteTitle+' | '+title %></title>
+
+  <% include include/header.ejs %>
+
+  <div class="columns-container">
+    <div id="columns" class="container">
+       <div class="row">
+          <!-- Sidebar -->
+          <div id="sidebar" class="column hidden">
+          </div>
+          <!-- Center Column -->
+          <div id="center_column" class="column col-sm-12"> 
+
+            
+
+             <div class="rte">
+                <div class="about-wrap">
+                   <div class="about-us">
+                      <div class="row">
+                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="about-image"><img src="img/aboutus/about-us-1.jpg" alt="#" /></div>
+                         </div>
+                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="about-text">
+                               <h2>Hello, We are Topdeal Established 2017 - Paris Fashion Show</h2>
+                               <p>Lorem Khaled Ipsum is a major key to success. Eliptical talk. The key to more success is to get a massage once a week, very important, major key, cloth talk. Mogul talk. Cloth talk. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. Surround yourself with angels.</p>
+                               <p>They key is to have every key, the key to open every door. We don’t see them, we will never see them. To be successful you’ve got to work hard, to make history, simple, you’ve got to make it. They never said winning was easy. Some people can’t handle success, I can. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth.</p>
+                               <a class="contact-us" href="#">Contact Us</a>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <!--end about-us -->
+                   <div class="why-choose clearfix">
+                      <div class="col-sm-4 col-xs-12 item shipping">
+                         <div class="content">
+                            <div class="icon"><img src="img/aboutus/about-item-1.png" alt="#" /></div>
+                            <div class="text">
+                               <h4><a href="#">Strategy & Marketing</a></h4>
+                               <p>Lorem Khaled Ipsum is a major key to success. Eliptical talk. The key to more success is to get a massage once a week, very important, major key, cloth talk.</p>
+                               <!--end text-->
+                            </div>
+                            <!--end content-->
+                         </div>
+                         <!--end item-->
+                      </div>
+                      <div class="col-sm-4 col-xs-12 item money">
+                         <div class="content">
+                            <div class="icon"><img src="img/aboutus/about-item-2.png" alt="#" /></div>
+                            <div class="text">
+                               <h4><a href="#">interaction design </a></h4>
+                               <p>Lorem Khaled Ipsum is a major key to success. Eliptical talk. The key to more success is to get a massage once a week, very important, major key, cloth talk.</p>
+                               <!--end text-->
+                            </div>
+                            <!--end content-->
+                         </div>
+                         <!--end item-->
+                      </div>
+                      <div class="col-sm-4 col-xs-12 item support">
+                         <div class="content">
+                            <div class="icon"><img src="img/aboutus/about-item-3.png" alt="#" /></div>
+                            <div class="text">
+                               <h4><a href="#">WEb Development</a></h4>
+                               <p>Lorem Khaled Ipsum is a major key to success. Eliptical talk. The key to more success is to get a massage once a week, very important, major key, cloth talk.</p>
+                               <!--end text-->
+                            </div>
+                            <!--end content-->
+                         </div>
+                         <!--end item-->
+                      </div>
+                      <!--end why-choose-->
+                   </div>
+                
+                </div>
+             </div>
+             <br />
+             <script type="text/javascript">
+                // <![CDATA[
+                      function toggleChevron(e) {
+                          $(e.target)
+                              .prev('.panel-heading')
+                              .find("i.indicator")
+                              .toggleClass('glyphicon-plus glyphicon-minus');
+                      }
+                      $('#accordion').on('hidden.bs.collapse', toggleChevron);
+                      $('#accordion').on('shown.bs.collapse', toggleChevron);
+                // ]]>
+             </script>
+             <script>// <![CDATA[
+                jQuery(document).ready(function($) {
+                    $('.out-team-content').owlCarousel({
+                      pagination: false,
+                      center: false,
+                      nav: true,
+                      loop: true,
+                      margin: 0,
+                      navText: [ '<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>' ],
+                      slideBy: 1,
+                      autoplay: true,
+                      autoplayTimeout: 2500,
+                      autoplayHoverPause: true,
+                      autoplaySpeed: 800,
+                      startPosition: 0, 
+                      responsive:{
+                        0:{
+                          items:1
+                        },
+                        480:{
+                          items:2
+                        },
+                        768:{
+                          items:3
+                        },
+                        1200:{
+                          items:4
+                        }
+                      }
+                    });
+                    $(document).ready(function(){
+                        $(".toggle-btn").click(function(){
+                            $("#myCollapsible").collapse('toggle');
+                        });
+                    });
+                
+                    $('.nav-tabs a').click(function (e) {
+                    e.preventDefault()
+                
+                
+                
+                
+                
+                    $(this).tab('show')
+                  })
+                
+                
+                                    
+                  });
+                // ]]>
+             </script>
+          </div>
+          <!-- #center_column -->
+       </div>
+       <!-- .row -->
+    </div>
+    <!-- #columns -->
+ </div>
+
+  <% include include/footer.ejs %>

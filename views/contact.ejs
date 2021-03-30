@@ -1,0 +1,152 @@
+<% include include/allcss.ejs %>
+<% include include/allscript.ejs %>
+<title><%= siteTitle+' | '+title %></title>
+
+  <% include include/header.ejs %>
+   <!-- Columns -->
+   <div class="columns-container">
+      <div id="columns" class="container">
+          <div class="row">
+
+              <!-- Sidebar -->
+              <div id="sidebar" class="column hidden">
+
+              </div>
+
+              <!-- Center Column -->
+              <div id="center_column" class="column col-sm-12">
+
+                  <!--<h1 class="page-heading bottom-indent">
+Contact us</h1>-->
+
+                  <div class="contact-form">
+                      <div class="contact-wrap row">
+                          <div class="gmap col-sm-12">
+                              <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+                              <div id="map">&nbsp;</div>
+                              <script type="text/javascript">
+                                  // <![CDATA[
+
+                                  var myOptions = {
+                                      zoom: 15,
+                                      scrollwheel: false,
+                                      center: new google.maps.LatLng(48.89364, 2.33739),
+                                      mapTypeId: google.maps.MapTypeId.ROADMAP
+                                  };
+
+                                  var map = new google.maps.Map(document.getElementById("map"), myOptions);
+                                  // ]]>
+                              </script>
+                          </div>
+                          <div class="contact-content">
+                              <div class="contact-info col-md-4 col-sm-12">
+                                  <h2 class="title">Contact Us</h2>
+                                  <p class="pre-text">
+                                      Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                      <br> Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sed do eiusmod tempor incididunt ut labore
+                                  </p>
+                                  <div class="info">
+                                      <ul>
+                                          <li class="address">
+                                              <label class="icon"><i class="fa fa-home"></i></label>
+                                              <span>Ranelagh Place, Liverpool, L3 5UL, England</span>
+                                          </li>
+                                          <li class="hotline">
+                                              <label class="icon"><i class="fa fa-phone"></i></label>
+                                              <span>8 (395) 989—20—11</span>
+                                          </li>
+                                          <li class="email">
+                                              <label class="icon"><i class="fa fa-envelope"></i></label>
+                                              <span><a href="#">topdeals@co.uk.com</a></span>
+                                          </li>
+
+                                      </ul>
+                                  </div>
+                                  <div class="social">
+                                      <a href="#"><i class="fa fa-facebook"></i></a>
+                                      <a href="#"><i class="fa fa-twitter"></i></a>
+                                      <a href="#"><i class="fa fa-google-plus"></i></a>
+                                      <a href="#"><i class="fa fa-flickr"></i></a>
+                                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                                  </div>
+                              </div>
+                              <form action="http://prestashop.flytheme.net/sp_topdeals16/en/contact-us" method="post" class="contact-form-box col-md-8 col-sm-12" enctype="multipart/form-data">
+                                  <fieldset>
+                                      <h2 class="title">Send your comments</h2>
+                                      <div class="row">
+                                          <div class="col-md-8 col-sm-7">
+                                              <div class="form-group selector1">
+                                                  <label for="id_contact">Subject Heading</label>
+                                                  <select id="id_contact" class="form-control" name="id_contact">
+                                                      <option value="0">Choose</option>
+                                                      <option value="2">Customer service</option>
+                                                      <option value="1">Webmaster</option>
+                                                  </select>
+                                              </div>
+                                              <!--<p id="desc_contact0" class="desc_contact">&nbsp;</p>
+                                       <p id="desc_contact2" class="desc_contact contact-title unvisible">
+                     For any question about a product, an order
+                  </p>
+                                       <p id="desc_contact1" class="desc_contact contact-title unvisible">
+                     If a technical problem occurs on this website
+                  </p>
+               -->
+                                              <p class="form-group">
+                                                  <label for="email">Email address</label>
+                                                  <input class="form-control grey validate" type="text" id="email" name="from" data-validate="isEmail" value="" />
+                                              </p>
+                                              <div class="form-group selector1">
+                                                  <label>Order reference</label>
+                                                  <input class="form-control grey" type="text" name="id_order" id="id_order" value="" />
+                                              </div>
+                                              <p class="form-group">
+                                                  <label for="fileUpload">Attach File</label>
+                                                  <input type="hidden" name="MAX_FILE_SIZE" value="134217728" />
+                                                  <input type="file" name="fileUpload" id="fileUpload" class="form-control" />
+                                              </p>
+                                          </div>
+                                          <div class="col-md-12 col-sm-12">
+                                              <div class="form-group" style="margin:0;">
+                                                  <label for="message">Message</label>
+                                              </div>
+                                              <textarea class="form-control" id="message" name="message"></textarea>
+                                          </div>
+                                      </div>
+                                      <div class="submit">
+                                          <button type="submit" name="submitMessage" id="submitMessage" class="button btn btn-default button-medium">
+                                              Send Email </span>
+                                          </button>
+                                      </div>
+                                  </fieldset>
+                              </form>
+                          </div>
+                      </div>
+
+                      <script type="text/javascript">
+                          // <![CDATA[
+                          $(document).ready(function($) {
+                              $('.gmap').on('click', function() {
+                                  $('.gmap #map').css("pointer-events", "auto");
+                              });
+
+                              $(".gmap").on('mouseleave', function() {
+                                  $('.gmap #map').css("pointer-events", "none");
+                              });
+                          });
+                          // ]]>
+                      </script>
+
+                  </div>
+
+              </div>
+              <!-- #center_column -->
+          </div>
+          <!-- .row -->
+      </div>
+      <!-- #columns -->
+
+  </div>
+  <!-- .columns-container -->
+
+  <% include include/footer.ejs %>

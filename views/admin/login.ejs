@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="body-full-height">
+<head>
+    <title>Login Screen | Admin Module</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" id="theme" href="/admin/css/theme-default.css" />
+</head>
+<body>
+  
+    <div class="login-container">
+        <div class="login-box animated fadeInDown"> 
+
+        <% if(message.length > 0) { %>
+            <div class="form"><p style="color: white;font-size: 20px;text-align: center;"><%= message %></p></div> 
+        <% } %>
+
+            <img width="400px" src="/admin/logo.png"> <br><br>     
+            <div class="login-body">
+                <div class="login-title"><strong>Welcome</strong>, Please login</div>
+                <form action="/admin/login" method="post" class="form-horizontal">              
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" name="username" placeholder="Username" required class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" name="password" class="form-control" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">                          
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-info btn-block" >Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login-footer">
+                <div class="pull-left">
+                    &copy; 2017 MS
+                </div>
+                <div class="pull-right">                 
+                    <a href="/admin/signup">Register</a> 
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

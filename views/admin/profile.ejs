@@ -1,0 +1,25 @@
+<% include ../include/adminallcss.ejs %>
+<title>Admin Panel | Meet Shah</title>
+   <% include ../include/adminheader.ejs %>     
+               
+                <ul class="breadcrumb">
+                    <li><a href="/admin/home">Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ul>             
+
+                <div class="page-content-wrap">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="well">
+                                <h3><span class="fa fa-user"></span> Welcome <%= user.username %></h3>
+                                <p>
+                                <strong>id</strong> <%= user.id %> <br>
+                                <strong>username</strong> <%= user.username %> <br>
+                                </p>                             
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+                
+<% include ../include/adminallscript.ejs %>  
+    

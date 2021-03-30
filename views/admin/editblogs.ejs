@@ -1,0 +1,123 @@
+<% include ../include/adminallcss.ejs %>
+<title>Admin Panel | Meet Shah</title>
+
+            
+            <% include ../include/adminheader.ejs %>      
+            
+       
+
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ul>             
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+
+    <% if (blog) { %>
+        <form  class="form-horizontal" action="" method="post" enctype="multipart/form-data"> 
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Products</h3>
+                </div>
+                
+                <div class="form-group"> <Br><br><Br><br>
+                    <label class="col-md-3 col-xs-12 control-label">First Name </label>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                            <input type="text" class="form-control" name="first_name" id="first-name" value="<%= blog.first_name %>" required>
+                        </div>
+                        <span class="help-block">Enter First Name</span>
+                    </div>
+                </div> 
+
+
+                <div class="form-group">
+                    <label class="col-md-3 col-xs-12 control-label">Last Name </label>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                            <input type="text" class="form-control" name="last_name" id="last-name" value="<%= blog.last_name %>" required>
+                        </div>
+                        <span class="help-block">Enter Last Name</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 col-xs-12 control-label">User Name </label>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                            <input type="text" class="form-control" name="username" id="username" value="<%= blog.user_name %>" required disabled title="Username can't be changed">
+                        </div>
+                        <span class="help-block">Enter User Name</span>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label class="col-md-3 col-xs-12 control-label">Mobile No </label>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                            <input type="number" class="form-control" name="number" id="number" placeholder="Number" value="<%= blog.number %>" required>
+                        </div>
+                        <span class="help-block">Enter Mobile No</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 col-xs-12 control-label">Choose position </label>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                            <select id="position" name="position" class="form-control" required>
+                                <option selected><%= blog.position %></option>
+                                <option>Goalkeeper</option>
+                                <option>Centre Back</option>
+                                <option>Right Back</option>
+                                <option>Left Back</option>
+                                <option>Defensive Midfielder</option>
+                                <option>Central Midfielder</option>
+                                <option>Attacking Midfielder</option>
+                                <option>Right Wing Forward</option>
+                                <option>Left Wing Forward</option>
+                                <option>Striker</option>
+                            </select>
+                        </div>
+                        <span class="help-block">Select position</span>
+                    </div>
+                </div>
+
+
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-primary pull-right">Update Blogs</button> 
+    
+                </div>
+
+            </div>
+
+
+        </form>
+    <% } else { %>
+        <p class="text-center">Blogs Not Found. Go <a href="/add">here</a> to add blogs.</p>
+    <% } %>
+</div>
+
+</div>
+
+
+
+<% include ../include/adminallscript.ejs %>  
+

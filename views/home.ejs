@@ -1,0 +1,89 @@
+  <% include include/allcss.ejs %>
+  <% include include/allscript.ejs %>
+  <title><%= siteTitle+' | '+title %></title>
+ 
+
+  <div id="wrapper">
+    <div class="header-container">
+
+  <% include include/header.ejs %>
+
+      <div class="slider-banner clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="slider-container col-md-9 col-sm-12 col-xs-12">
+                    <!-- Module SpHomeSlider -->
+                    <div id="sphomepage-slider1" class="sphomepage-slider ">
+                        <!--  <div class="sp-homeslider extraslider-inner-1" data-effect="">  -->
+                        <div class="sp-homeslider sphomeslider-inner-1">                    
+                          <div class="item ">
+                            <img class="responsive" src="img/slider/s1.jpg"  />
+                          </div>
+                          <div class="item ">
+                            <img class="responsive" src="img/slider/s2.jpg"  />
+                          </div>
+                          <div class="item ">
+                            <img class="responsive" src="img/slider/s3.jpg"  />
+                          </div>
+                        </div>
+                    </div>
+                  
+                    <div class="banner-layout-1 clearfix">
+                        <div class="sp_banner_2_14964875581846215349 banner-1 effect-1  spbanner">
+                            <a href="#" title="Banner 1">
+                                <img class="img-responsive" src="img/slider/banner01.jpg" />
+                            </a>
+                        </div>
+                        <div class="sp_banner_3_14964875581211236902 banner-2 effect-1  spbanner">
+                            <a href="#" title="Banner 2">
+                                <img class="img-responsive" src="img/slider/banner02.jpg" />
+                            </a>
+                        </div>
+                        <div class="sp_banner_4_14964875581131115690 banner-3 effect-1  spbanner">
+                            <a href="#" title="Banner 3">
+                                <img class="img-responsive" src="img/slider/banner03.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+    <script type="text/javascript">
+      $(".sphomeslider-inner-1").owlCarousel({
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplaySpeed: 5000,
+          smartSpeed: 500,
+          autoplayHoverPause: true,
+          startPosition: 0,
+          mouseDrag: true,
+          touchDrag: true,
+          pullDrag: true,
+          dots: 1,
+          autoWidth: false,
+          dotClass: "owl-dot",
+          dotsClass: "owl-dots",
+          nav: true,
+          loop: true,
+          navText: ["Next", "Prev"],
+          navClass: ["owl-prev", "owl-next"],
+          responsive: {
+              0: {
+                  items: 1 
+              },
+          }
+      });
+  </script>
+ 
+ <% include include/footer.ejs %>

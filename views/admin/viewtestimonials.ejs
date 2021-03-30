@@ -1,0 +1,70 @@
+<% include ../include/adminallcss.ejs %>
+<title>Admin Panel | Meet Shah</title>
+  
+            <% include ../include/adminheader.ejs %>      
+            
+
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">View Testimonials</li>
+                </ul>   
+                  
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">View testimonials</h3>
+                            </div>
+                            <div class="panel-body">
+
+              
+                    <% if (testimonialsresult.length > 0) {%>
+                        <table class="table datatable">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                                                     
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Image</th> 
+                                    <th scope="col">Message</th>
+                                    <th scope="col">Position</th>                                  
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% testimonialsresult.forEach((testimonials, index) => { %>
+                                    <tr>
+                                        <th scope="row"><%= testimonials.id %></th>
+                                        <td>@<%= testimonials.user_name %></td>
+                                        <td><img width="50px" src="/assets/img/<%= testimonials.image %>" class="rounded-circle player-img" alt=""></td>
+                                       
+                                        <td><%= testimonials.messageofuser %></td>
+                                        <td><%= testimonials.position %></td>
+                                   
+                                     
+                                        <td>
+                                            <a href="/admin/testimonialsedit/<%= testimonials.id %>"  rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                                            <a href="/admin/testimonialsdelete/<%= testimonials.id %>" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    <% } else { %>
+                        <p class="text-center">No testimonials found. Go <a href="/admin/testimonialsadd" >here</a> To Add testimonials.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+      
+        <% include ../include/adminallscript.ejs %>  
+   
